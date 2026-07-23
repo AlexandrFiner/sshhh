@@ -1,0 +1,49 @@
+# Example sshhh config.
+# Real path: ~/.config/sshhh/config.yaml (or $SSHHH_CONFIG).
+#
+# Defaults cascade: global -> group -> host.
+# Each level overrides only the fields it sets.
+
+defaults:
+  user: alex
+  identity: ~/.ssh/id_rsa
+
+groups:
+  aws-prod:
+    defaults:
+      jump: bastion-aws       # every host in this group goes through this bastion
+      user: ubuntu
+    hosts:
+      api1:
+        host: 10.0.1.10
+        name: API server 1
+        desc: main API, behind the ALB
+        tags: [api, critical]
+      db1:
+        host: 10.0.1.20
+        name: Postgres primary
+        desc: replicas db2/db3
+        tags: [db, critical]
+        sudo: true            # log in as root (sudo -i)
+
+  gcp-prod:
+    defaults:
+      user: deploy
+    hosts:
+      worker1:
+        host: 10.128.0.5
+        name: Worker node
+        tags: [worker]
+
+  digitalocean-dev:
+    defaults:
+      user: root
+    hosts:
+      web1:
+        host: 203.0.113.10
+        name: Dev web
+        desc: staging droplet
+      cache1:
+        host: 203.0.113.11
+        port: 2222
+        name: Redis dev

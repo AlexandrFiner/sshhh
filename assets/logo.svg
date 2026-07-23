@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="760" height="260" role="img" aria-label="sshhh — a quiet ssh launcher">
+  <defs>
+    <linearGradient id="icon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7a7aff"/>
+      <stop offset="1" stop-color="#4f46d6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- terminal icon: rounded square with a prompt -->
+  <rect x="24" y="58" width="144" height="144" rx="34" fill="url(#icon)"/>
+  <text x="96" y="150" text-anchor="middle" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="66" font-weight="700" fill="#ffffff">&gt;_</text>
+
+  <!-- wordmark: the trailing h's fade out like a whisper -->
+  <text x="196" y="168" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="120" font-weight="800" fill="#5f5fd7" letter-spacing="2">
+    <tspan>s</tspan><tspan>s</tspan><tspan fill-opacity="0.85">h</tspan><tspan fill-opacity="0.6">h</tspan><tspan fill-opacity="0.4">h</tspan><tspan font-size="72" fill-opacity="0.22"> ···</tspan>
+  </text>
+
+  <!-- tagline -->
+  <text x="200" y="214" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="27" fill="#8a8a9c" letter-spacing="1">a quiet ssh launcher</text>
+</svg>
