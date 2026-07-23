@@ -31,6 +31,10 @@ Optional short shell alias so you don't type 5 letters:
 echo "alias s=sshhh" >> ~/.zshrc && source ~/.zshrc
 ```
 
+## Screenshots
+
+<img src="assets/screen.png">
+
 ## Config
 
 Defaults to `~/.config/sshhh/config.yaml` (override with `$SSHHH_CONFIG` or the
